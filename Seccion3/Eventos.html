@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Primera aplicacion de Vue.js</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id = 'eventos'>
+    <button v-on:mouseEnter="sumarUno">Sumar uno</button>
+    <button v-on:click="restarUno">Restar uno</button>
+    <hr>
+    {{ contador }}
+
+    <button v-on:click="alerta('Esta es la alerta')">Mostrar alerta</button>
+    <div style="height: 300px;border:1px solid blue" @mousemove="mostrarUbicacion"
+         v-on:click="sumar">
+          <div style="height:30px;border:1px solid red" v-on:mousemove.stop>
+    </div>
+</div>
+x: {{x}}, y: {{y}}, contador: {{conta}}
+<input type="text" @keyup="sumar(1)">
+
+    <script src="eventos.js"></script>
+</body>
+</html>
